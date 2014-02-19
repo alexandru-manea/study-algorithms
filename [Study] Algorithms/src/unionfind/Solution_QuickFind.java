@@ -22,14 +22,16 @@ public class Solution_QuickFind {
 	 * id[]  | | | | | | | | | |   => {0, 5, 6}, {1, 2, 7}, {3, 4, 8, 9}
 	 *       0 1 1 8 8 0 0 1 8 8
 	 *   
-	 *       
-	 * # FIND  :: Check if p and q have the same id
+	 * -----------------------------------------------      
+	 * # FIND  :: CHECK IF p AND q HAVE THE SAME ENTRY
+	 * -----------------------------------------------
 	 * 
 	 * e.g. id[1] != id[6] => not connected
 	 *      id[3] == id[4] => connected
 	 * 
-	 * 
-	 * # UNION :: Change all entries whose id equals id[p] to value id[q] 
+	 * ------------------------------------------------------------------
+	 * # UNION :: CHANGE ALL ENTRIES WHOSE ID EQUALS id[p] TO VALUE id[q] 
+	 * ------------------------------------------------------------------
 	 * 
 	 * e.g. UNION(1, 6)
 	 * 
@@ -42,12 +44,10 @@ public class Solution_QuickFind {
 	 *       
 	 */
 	
-	
 	/*
 	 * Quick Find implementation. 
 	 * 
 	 */
-	
 	static class QuickFindUF {
 		
 		// data structure used
