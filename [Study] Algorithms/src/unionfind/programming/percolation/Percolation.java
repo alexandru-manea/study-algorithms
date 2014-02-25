@@ -14,6 +14,9 @@ import unionfind.programming.percolation.specification.WeightedQuickUnionUF;
 public class Percolation {
 
 	private int lengthOfOneSideOfGrid;
+	private final int topVirtualElementUFIndex = 0;
+	private int bottomVirtualElementUFIndex;
+	
 	private WeightedQuickUnionUF unionFindDataStructure; // used to check for percolation
 	private boolean[][] emptyState; // used to keep track of open or full sites TODO Do we need this?
 	
@@ -46,22 +49,20 @@ public class Percolation {
 		int noOfUnionFindElements = lengthOfOneSideOfGrid * lengthOfOneSideOfGrid + 2;
 		this.unionFindDataStructure = new WeightedQuickUnionUF(noOfUnionFindElements);
 		
-		
 		/* Execute union operations to connect the two virtual elements to the top and bottom elements */
 		
-		int topVirtualElementId = 0;
-		int bottomVirtualElementId = noOfUnionFindElements - 1;
+		this.bottomVirtualElementUFIndex = noOfUnionFindElements - 1;
 		
 		// connect top virtual element to first row
 		for (int firstRowElement = 1; firstRowElement <= lengthOfOneSideOfGrid; firstRowElement++) {
 			
-			unionFindDataStructure.union(topVirtualElementId, firstRowElement);
+			unionFindDataStructure.union(topVirtualElementUFIndex, firstRowElement);
 		}
 
 		// connect bottom virtual element to last row
 		for (int lastRowElement = 1; lastRowElement <= lengthOfOneSideOfGrid; lastRowElement++) {
 
-			unionFindDataStructure.union(bottomVirtualElementId, lastRowElement);
+			unionFindDataStructure.union(bottomVirtualElementUFIndex, lastRowElement);
 		}
 	}
 
@@ -70,7 +71,7 @@ public class Percolation {
 	 * Opens site at row i and column j, if it is not already. 1-index based.
 	 * 
 	 */
-	public void open(int i, int j) throws IndexOutOfBoundsException {
+	public void open(int i, int j) {
 		
 		// check for correct parameters
 		if (((i < 1) || (i > lengthOfOneSideOfGrid)) || ((j < 1) || (j > lengthOfOneSideOfGrid))) {
@@ -145,7 +146,7 @@ public class Percolation {
 	 * Checks whether site at row i and column j is open. 1-index based.
 	 * 
 	 */
-	public boolean isOpen(int i, int j) throws IndexOutOfBoundsException {
+	public boolean isOpen(int i, int j) {
 
 		// check for correct parameters
 		if (((i < 1) || (i > lengthOfOneSideOfGrid)) || ((j < 1) || (j > lengthOfOneSideOfGrid))) {
@@ -160,7 +161,7 @@ public class Percolation {
 	 * Checks whether site at row i and column j is full. 1-index based.
 	 * 
 	 */
-	public boolean isFull(int i, int j) throws IndexOutOfBoundsException {
+	public boolean isFull(int i, int j) {
 		
 		// check for correct parameters
 		if (((i < 1) || (i > lengthOfOneSideOfGrid)) || ((j < 1) || (j > lengthOfOneSideOfGrid))) {
@@ -194,8 +195,7 @@ public class Percolation {
 	 */
 	public boolean percolates() {
 		
-		
-
+		return unionFindDataStructure.connected(topVirtualElementUFIndex, bottomVirtualElementUFIndex);
 	}
 	
 	/**
@@ -218,6 +218,10 @@ public class Percolation {
 		emptyState[rowIndex- 1 ][columnIndex - 1] = emptyStateValue;
 	}
 	
+	/**
+	 * Private inner class used when computing surrounding elements for an element in the grid.
+	 *
+	 */
 	private class GridPosition {
 		
 		private int rowIndex;
