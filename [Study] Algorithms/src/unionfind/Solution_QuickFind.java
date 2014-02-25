@@ -90,10 +90,9 @@ public class Solution_QuickFind {
 	 * COMPLEXITY ANALYSIS OF QUICK-FIND
 	 * ---------------------------------
 	 * 
-	 * Cost model -- number of array read/write
+	 * Cost model -- number of array read/write FOR 1 OPERATION.
  	 * 
-	 * # INITIALIZE :: n
-	 * 
+	 * # INITIALIZE :: o(n)
 	 * # UNION      :: O(n)
 	 * # FIND       :: O(1)
 	 * 

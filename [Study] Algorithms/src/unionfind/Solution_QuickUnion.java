@@ -94,15 +94,15 @@ public class Solution_QuickUnion {
 	 * COMPLEXITY ANALYSIS OF QUICK-UNION
 	 * ---------------------------------
 	 * 
-	 * Cost model -- number of array read/write
+	 * Cost model -- number of array read/write FOR 1 OPERATION.
  	 * 
-	 * # INITIALIZE :: n
-	 * 
+	 * # INITIALIZE :: O(n)
 	 * # UNION      :: O(n) (includes cost of finding roots)
 	 * # FIND       :: O(n)
 	 * 
 	 * *******************************************************************************************************
 	 * IN THE QUICK-UNION ALGORITHM, BOTH OPERATIONS ARE O(N); BAD PERFORMANCE ESPECIALLY WHEN TREES GET TALL.
+	 * ALGORITHM GOOD ONLY AS BASIS FOR MORE ADVANCED ONES.
 	 * *******************************************************************************************************
 	 * 
 	 */
