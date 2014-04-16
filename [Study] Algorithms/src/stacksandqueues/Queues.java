@@ -19,7 +19,7 @@ public class Queues {
 	 */
 	interface Queue<T> {
 		
-		public void endqueue(T item);
+		public void enqueue(T item);
 		public T dequeue();
 		public boolean isEmpty();
 	}
@@ -51,7 +51,7 @@ public class Queues {
 		
 		
 		@Override
-		public void endqueue(T item) {
+		public void enqueue(T item) {
 
 			// save the previous tail node
 			Node<T> previousTail = tail;

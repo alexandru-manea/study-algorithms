@@ -154,7 +154,7 @@ public class Stacks {
 	 */
 	
 	/*
-	 * Linked-list implementation of stack
+	 * Resizing array implementation of stack
 	 * 
 	 */
 	class LinkedListArray<T> implements Stack<T> {
