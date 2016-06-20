@@ -1,4 +1,4 @@
-package data_structures.arrays_and_strings;
+package data_structures.arrays;
 
 /**
  * TASK :: Given an integer n, write a linear-time algorithm to generate the following pattern (in an array):

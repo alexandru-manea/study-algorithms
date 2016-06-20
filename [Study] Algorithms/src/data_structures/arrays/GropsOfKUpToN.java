@@ -1,4 +1,4 @@
-package data_structures.arrays_and_strings;
+package data_structures.arrays;
 
 /**
  * TASK :: Given an integer n, and another one k, with k < n, write a linear-time algorithm to populate an array like this:

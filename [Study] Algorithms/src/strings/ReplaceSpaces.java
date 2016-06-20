@@ -1,4 +1,4 @@
-package data_structures.arrays_and_strings;
+package strings;
 
 /**
  *  TASK :: Replace all spaces in a string with 'x'. 

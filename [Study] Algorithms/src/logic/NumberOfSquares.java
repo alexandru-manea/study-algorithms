@@ -3,7 +3,7 @@ package logic;
 /**
  * TASK :: Given integers a and b, count the number of square integers between them. 
  * 
- * @Hackerrank
+ * @HackerRank
  * 
  */
 

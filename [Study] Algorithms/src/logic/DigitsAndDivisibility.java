@@ -8,7 +8,7 @@ package logic;
  *  
  *  If no such number exists, print -1.
  *  
- *  @Hackerrank
+ *  @HackerRank
  *
  */
 

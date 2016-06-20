@@ -5,7 +5,7 @@ package logic;
  * C dollars. The store offers a discount: for every M wrappers he gives to the store, he gets one chocolate for free. 
  * How many chocolates does Bob get to eat?
  * 
- * @Hackerrank
+ * @HackerRank
  * 
  */
 

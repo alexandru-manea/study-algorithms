@@ -1,4 +1,4 @@
-package data_structures.arrays_and_strings;
+package data_structures.arrays;
 
 /**
  * TASK :: Given a 2D array of digits, try to find the occurrence of a given 2D pattern of digits.
@@ -21,7 +21,7 @@ package data_structures.arrays_and_strings;
  * 111111
  * 
  * 
- * @Hackerrank
+ * @HackerRank
  *
  */
 

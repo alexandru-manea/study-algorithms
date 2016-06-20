@@ -1,4 +1,4 @@
-package data_structures.arrays_and_strings;
+package data_structures.arrays;
 
 /**
  *  TASK :: Write an algorithm such that if an element in an MxN matrix is 0, 

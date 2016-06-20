@@ -1,4 +1,4 @@
-package data_structures.arrays_and_strings;
+package strings;
 
 /**
  *  TASK :: Write code to reverse a C-style string
